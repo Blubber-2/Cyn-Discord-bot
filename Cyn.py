@@ -100,7 +100,7 @@ async def on_guild_join(guild):
 
 @bot.event
 async def on_member_join(member):
-    WELCOME_CHANNEL_ID = 1505061274877300818 and 1465987123181256758
+    WELCOME_CHANNEL_ID = #insert your server ID here
     try:
         channel=await bot.fetch_channel(WELCOME_CHANNEL_ID)
         await channel.send(f"Welcome eager beaver <:Rawr:1505173389642436709> {member.mention}")
