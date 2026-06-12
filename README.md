@@ -4,6 +4,9 @@ Though there are a few commands that can cuase issue such as "Play" Command,
 it for it to work you must be on a pc and have the MP3 be a path file, remove the Quotation marks and replace the backslashes with forward slashes.
 additionally the bot must be outside of a Voicechannel otherwise it will not function properly, because the bot needs to join via the command.
 
+Direct server download link
+"https://discord.com/oauth2/authorize?client_id=1505063868580233256&permissions=8&integration_type=0&scope=bot+applications.commands"
+
 Another command is the "solver_cyn" command. After inputting the command, simply respond with, My Great Despair
 it needs to be done within the 30s timer otherwise it will respond with a timeout message.
 
