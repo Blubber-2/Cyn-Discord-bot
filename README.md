@@ -1,7 +1,7 @@
 This is a rudimentary Discord bot.
 It has a fair amount of commands.
-Though there are a few commands that can cuase issue such as "Play" Command,
-it for it to work you must be on a pc and have the MP3 be a path file, remove the Quotation marks and replace the backslashes with forward slashes.
+Though there are a few commands that can cause issue such as "Play" Command,
+for it to work you must be on a pc and have the MP3 and copy it as path, remove the quotation marks and replace the backslashes with forward slashes.
 additionally the bot must be outside of a Voicechannel otherwise it will not function properly, because the bot needs to join via the command.
 
 Direct server download link
