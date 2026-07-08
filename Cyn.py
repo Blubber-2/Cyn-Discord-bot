@@ -1,9 +1,7 @@
 import asyncio
 import random
-
 import discord
 from discord.ext import commands
-
 import json
 
 
@@ -67,7 +65,7 @@ async def solver_cyn(ctx):
         return (
             m.author == ctx.author 
             and m.channel == ctx.channel 
-            and m.content == "My Great Dispair"
+            and m.content == "My Great Despair"
         )
     try:
         msg1 = await bot.wait_for('message', check=check, timeout=30.0)
@@ -80,7 +78,8 @@ async def solver_cyn(ctx):
             "Do NOT attempt communication.\n"
             "Do NOT interact under any circumstances\n"
             "You have been warned.\n"
-            "Any action you make from here on out is your own choice. ''Do not let The Devil sway you.'' "
+            "Any action you make from here on out is your own choice.\n'" \
+            "'Do not let The Devil sway you.'' "
         )
     except asyncio.TimeoutError:
         await ctx.send("AUTH-VALIDATION-TIMEOUT.")
@@ -95,12 +94,12 @@ async def on_guild_join(guild):
                 channel = txt_channel
                 break
     if channel is not None:
-        await channel.send("Hello goobers, you will make... Excellent play things. >:3")
+        await channel.send("Hello goobers, you will make... Excellent play things. >:3 *Smug expression* ")
 
 
 @bot.event
 async def on_member_join(member):
-    WELCOME_CHANNEL_ID = #insert your server ID here
+    WELCOME_CHANNEL_ID = 1505061274877300818 and 1465987123181256758
     try:
         channel=await bot.fetch_channel(WELCOME_CHANNEL_ID)
         await channel.send(f"Welcome eager beaver <:Rawr:1505173389642436709> {member.mention}")
@@ -148,8 +147,7 @@ async def callback_ping(ctx):
     await ctx.send(
     "--Callback Ping-- \n"
     "-Initiate return- \n"
-    "All Worker Drones return to Administrator effective immediately."
- )
+    "All Worker Drones return to Administrator effective immediately.")
 
 
 @bot.hybrid_command()
@@ -256,6 +254,7 @@ async def join(ctx):
         await ctx.send("Calm down, Eager beaver, you need to be in a Vc first.")
 
 
+#Must have the bot outside a vocie channel for it to work
 @bot.hybrid_command()
 async def play(ctx, file_path: str):
     #Connect to voice channel ya goober
@@ -303,6 +302,17 @@ async def snake(ctx):
 @bot.hybrid_command()
 async def the_numbers(ctx):
     await ctx.send("2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59.\n""https://i.pinimg.com/736x/24/63/bd/2463bd76a3ea46b1e5346a545fa5d2b7.jpg")
+
+
+#8-Ball function
+@bot.hybrid_command()
+async def random_choice_generator(ctx):
+    try:
+        random_choice_generator = ["Yes", "No", "Ask again", "Maybe", "For sure", "Not likely", "Most likely", "Out look good", "Out look bad"]
+    except:
+        ctx.send("An error has ocurred")
+    finally:
+        await ctx.send(random.choice(random_choice_generator))
 
 
 @bot.event
